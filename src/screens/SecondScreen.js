@@ -9,6 +9,8 @@ import useStore from '../store/useStore';
 const SecondScreen = ({navigation}) => {
     const count = useStore(state => state.count);
     const addCount = useStore(state => state.addCount);
+    const subtractCount = useStore(state => state.subtractCount);
+
     return (
         <SafeAreaView style={{
             flex: 1,
@@ -23,8 +25,13 @@ const SecondScreen = ({navigation}) => {
             </TouchableOpacity>
             <TouchableOpacity style={{backgroundColor: 'pink', borderWidth: 1, borderRadius: 0.5, paddingVertical: 10, marginHorizontal: 30, marginVertical: 15}}
                               activeOpacity = {.9}
-                              onPress={() => addCount}>
+                              onPress={addCount}>
                 <Text style={{ paddingHorizontal: 20}}>Add count</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={{backgroundColor: 'pink', borderWidth: 1, borderRadius: 0.5, paddingVertical: 10, marginHorizontal: 30, marginVertical: 15}}
+                              activeOpacity = {.9}
+                              onPress={subtractCount}>
+                <Text style={{ paddingHorizontal: 20}}>Sub count</Text>
             </TouchableOpacity>
         </SafeAreaView>
     );

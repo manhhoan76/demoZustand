@@ -24,7 +24,7 @@ const HomeScreen = ({navigation}) => {
             </TouchableOpacity>
             <TouchableOpacity style={{borderWidth: 1, borderRadius: 0.5, paddingVertical: 10, marginHorizontal: 30, marginVertical: 15}}
                               activeOpacity = {.9}
-                              onPress={() => addCount}>
+                              onPress={addCount}>
                 <Text style={{paddingHorizontal: 20, fontSize: 17}}>Add Count</Text>
             </TouchableOpacity>
         </SafeAreaView>
